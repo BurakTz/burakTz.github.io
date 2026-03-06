@@ -1,0 +1,240 @@
+/* =============================================
+   GRUP SEÇİCİ
+   ============================================= */
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* =============================================
+   GENEL
+   ============================================= */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d0d12;
+    color: #e2e8f0;
+    margin: 0;
+    padding-top: 56px;
+}
+
+/* =============================================
+   SABİT NAV BARI
+   ============================================= */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0a0a10;
+    border-bottom: 2px solid #6d28d9;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 20px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+/* Hiyerarşik seçici 1 */
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #a0aec0;
+    font-size: 14px;
+    padding: 16px 20px;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s;
+    box-sizing: border-box;
+}
+
+nav a:hover {
+    color: #c084fc;
+    border-bottom: 3px solid #7c3aed;
+}
+
+nav a.active {
+    color: #e2e8f0;
+    border-bottom: 3px solid #a855f7;
+    font-weight: bold;
+}
+
+/* =============================================
+   WRAPPER
+   ============================================= */
+.wrapper {
+    width: 820px;
+    margin: 35px auto;
+    border: 1px solid #2d2d3a;
+    background-color: #16161f;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* =============================================
+   HEADER
+   ============================================= */
+header {
+    background-color: #12121a;
+    border-bottom: 1px solid #2d2d3a;
+    padding: 28px 30px;
+}
+
+header h1 {
+    font-size: 26px;
+    color: #f0e6ff;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 15px;
+    color: #8b8ba7;
+    line-height: 1.6;
+}
+
+/* =============================================
+   İKİ SÜTUNLU İÇERİK
+   ============================================= */
+.content-area {
+    font-size: 0;
+    padding: 25px 30px;
+}
+
+.content, .sidebar {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+    box-sizing: border-box;
+    border: 1px solid #2d2d3a;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #1e1e2a;
+}
+
+.content {
+    width: 56%;
+    margin-right: 2%;
+}
+
+.sidebar {
+    width: 42%;
+}
+
+/* Hiyerarşik seçici 2 */
+.content p {
+    font-size: 15px;
+    color: #c8d0dc;
+    line-height: 1.75;
+    text-align: left;
+    margin-bottom: 14px;
+}
+
+/* Hiyerarşik seçici 3 */
+.sidebar p {
+    font-size: 14px;
+    color: #b0b8c8;
+    line-height: 1.7;
+    text-align: left;
+    margin-bottom: 14px;
+}
+
+.content h2, .sidebar h2 {
+    font-size: 17px;
+    color: #d8b4fe;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #6d28d9;
+}
+
+/* =============================================
+   TEK SÜTUNLU SAYFA (about, interests, contact)
+   ============================================= */
+.page-content {
+    padding: 28px 30px;
+}
+
+.page-content h2 {
+    font-size: 18px;
+    color: #d8b4fe;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #6d28d9;
+    margin-top: 24px;
+}
+
+.page-content h2:first-child {
+    margin-top: 0;
+}
+
+.page-content p {
+    font-size: 15px;
+    color: #c8d0dc;
+    line-height: 1.75;
+    margin-bottom: 12px;
+}
+
+.page-content ul, .page-content ol {
+    margin: 0 0 16px 0;
+    padding-left: 22px;
+}
+
+.page-content li {
+    font-size: 15px;
+    color: #c8d0dc;
+    line-height: 1.8;
+}
+
+.page-content dl dt {
+    font-size: 15px;
+    font-weight: bold;
+    color: #d8b4fe;
+    margin-top: 12px;
+}
+
+.page-content dl dd {
+    font-size: 14px;
+    color: #b0b8c8;
+    line-height: 1.7;
+    margin-left: 16px;
+}
+
+.page-content blockquote {
+    border-left: 3px solid #6d28d9;
+    margin: 16px 0;
+    padding: 10px 18px;
+    background-color: #1a1a26;
+    color: #a78bfa;
+    font-style: italic;
+    font-size: 15px;
+}
+
+.page-content a {
+    color: #a855f7;
+    text-decoration: none;
+}
+
+.page-content a:hover {
+    color: #d8b4fe;
+    text-decoration: underline;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+    border-top: 1px solid #2d2d3a;
+    padding: 18px 30px;
+    text-align: center;
+    background-color: #12121a;
+}
+
+footer p {
+    font-size: 13px;
+    color: #4a4a62;
+    line-height: 1.5;
+}

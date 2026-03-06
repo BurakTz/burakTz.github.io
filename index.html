@@ -8,29 +8,56 @@
 </head>
 <body>
 
-    <header>
-        <h1>Burak Tuzcu</h1>
-        <p>Bilgisayar Mühendisliği Öğrencisi</p>
-    </header>
-
     <nav>
-        <a href="index.html">Ana Sayfa</a>
-        <a href="about.html">Hakkımda</a>
-        <a href="interests.html">İlgi Alanlarım</a>
-        <a href="contact.html">İletişim</a>
+        <ul>
+            <li><a href="index.html" class="active">Ana Sayfa</a></li>
+            <li><a href="about.html">Hakkımda</a></li>
+            <li><a href="interests.html">İlgi Alanlarım</a></li>
+            <li><a href="contact.html">İletişim</a></li>
+        </ul>
     </nav>
 
-    <main>
-        <h2>Hoş Geldiniz!</h2>
-        <p>Marmara Üniversitesi Bilgisayar Mühendisliği 3. sınıf öğrencisiyim.</p>
+    <div class="wrapper">
 
-        <h2 id="hizli-baglantilar">Hızlı Bağlantılar</h2>
-        <ul>
-            <li><a href="#hizli-baglantilar">Hakkımda git</a></li>
-            <li><a href="interests.html">İlgi Alanlarıma git</a></li>
-            <li><a href="contact.html">İletişime geç</a></li>
-        </ul>
-    </main>
+        <header>
+            <h1>Burak Tuzcu</h1>
+            <p>Marmara Üniversitesi &mdash; Bilgisayar Mühendisliği 3. Sınıf Öğrencisi</p>
+        </header>
+
+        <div class="content-area">
+
+            <main class="content">
+                <h2>İçerik</h2>
+                <p>
+                    Merhaba! Ben Burak Tuzcu. Yazılım geliştirme, web teknolojileri ve yapay zeka
+                    alanlarına ilgi duyuyorum. Bu sayfada kendim hakkında kısa bilgiler bulabilirsiniz.
+                </p>
+                <p>
+                    Şu anda Marmara Üniversitesi Bilgisayar Mühendisliği bölümünde okuyorum.
+                    Boş zamanlarımda proje geliştiriyor, yeni teknolojiler öğreniyor ve
+                    açık kaynak topluluklarına katkı sağlamaya çalışıyorum.
+                </p>
+            </main>
+
+            <aside class="sidebar">
+                <h2>Kısa Bilgi</h2>
+                <p>
+                    Bilgisayar mühendisliği alanında kendimi geliştirmeye devam ediyorum.
+                    Özellikle backend geliştirme ve siber güvenlik konularına ilgi duyuyorum.
+                </p>
+                <p>
+                    Projelerimi Python ve JavaScript ile geliştiriyorum.
+                    Takım çalışmasına önem veriyor, sürekli öğrenmeyi ilke ediniyorum.
+                </p>
+            </aside>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Burak Tuzcu. Bu sayfa HTML5 + CSS3 ile hazırlanmıştır.</p>
+        </footer>
+
+    </div>
 
     <script src="scripts/script.js"></script>
 </body>
