@@ -25,6 +25,8 @@ if (contactForm) {
         const email = document.getElementById('email').value;
         const konu = document.getElementById('konu').value;
         const mesaj = document.getElementById('mesaj').value;
+        const cvInput = document.getElementById('cv');
+        const cvDosya = cvInput.files.length > 0 ? cvInput.files[0].name : 'Yüklenmedi';
 
         const seciliIlgiler = Array.from(
             document.querySelectorAll('input[name="ilgi"]:checked')
@@ -38,6 +40,7 @@ if (contactForm) {
             'Ad Soyad: ' + ad + '\n' +
             'E-posta: ' + email + '\n' +
             'İlgi Alanları: ' + ilgiMetni + '\n' +
+            'CV Dosyası: ' + cvDosya + '\n' +
             'Konu: ' + konu + '\n\n' +
             'Mesaj:\n' + mesaj;
 
