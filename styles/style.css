@@ -68,7 +68,8 @@ nav a.active {
    WRAPPER
    ============================================= */
 .wrapper {
-    width: 820px;
+    max-width: 820px;
+    width: calc(100% - 40px);
     margin: 35px auto;
     border: 1px solid #2d2d3a;
     background-color: #16161f;
@@ -221,6 +222,127 @@ header p {
 .page-content a:hover {
     color: #d8b4fe;
     text-decoration: underline;
+}
+
+/* =============================================
+   İLETİŞİM FORMU
+   ============================================= */
+.contact-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    border-top: 1px solid #2d2d3a;
+}
+
+.form-toggle {
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #6d28d9;
+    color: #d8b4fe;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    padding: 20px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-toggle:hover {
+    background-color: #1a1a26;
+}
+
+#contactForm {
+    padding: 28px 30px;
+}
+
+.form-hidden {
+    display: none;
+}
+
+.contact-container label {
+    display: block;
+    font-size: 14px;
+    color: #a0aec0;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.checkbox-group {
+    background-color: #1e1e2a;
+    border: 1px solid #2d2d3a;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-bottom: 18px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+    color: #c8d0dc;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.checkbox-label:last-child {
+    margin-bottom: 0;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin-bottom: 0;
+    accent-color: #7c3aed;
+}
+
+.contact-container input:not([type="checkbox"]),
+.contact-container select,
+.contact-container textarea {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+    background-color: #1e1e2a;
+    border: 1px solid #2d2d3a;
+    border-radius: 4px;
+    color: #e2e8f0;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.contact-container select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23a0aec0' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+}
+
+.contact-container input:not([type="checkbox"]):focus,
+.contact-container select:focus,
+.contact-container textarea:focus {
+    outline: none;
+    border-color: #7c3aed;
+}
+
+.contact-container button[type="submit"] {
+    background-color: #7c3aed;
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-container button[type="submit"]:hover {
+    background-color: #6d28d9;
 }
 
 /* =============================================
