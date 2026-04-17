@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6-2: Birim Dönüştürücü - Burak Tuzcu</title>
+    <link rel="stylesheet" href="styles/lab6.css">
+</head>
+<body>
+
+    <div class="back-bar">
+        <a href="about.html" class="back-link">&#8592; Geri Dön</a>
+        <span>Lab 6-2: Birim Dönüştürücü</span>
+    </div>
+
+    <div class="lab-wrapper">
+        <div class="lab-card">
+            <h1>Birim Dönüştürücü</h1>
+
+            <div class="form-group">
+                <label for="deger">Değer Giriniz:</label>
+                <input type="text" id="deger" placeholder="Sayı girin">
+            </div>
+
+            <div class="form-group">
+                <label for="donusumTipi">Dönüşüm Tipi:</label>
+                <select id="donusumTipi">
+                    <option value="c_f">Celsius -&gt; Fahrenheit</option>
+                    <option value="f_c">Fahrenheit -&gt; Celsius</option>
+                    <option value="c_k">Celsius -&gt; Kelvin</option>
+                    <option value="k_c">Kelvin -&gt; Celsius</option>
+                    <option value="m_km">Metre -&gt; Kilometre</option>
+                    <option value="km_m">Kilometre -&gt; Metre</option>
+                    <option value="m_mil">Metre -&gt; Mil</option>
+                    <option value="mil_m">Mil -&gt; Metre</option>
+                    <option value="kg_g">Kilogram -&gt; Gram</option>
+                    <option value="g_kg">Gram -&gt; Kilogram</option>
+                </select>
+            </div>
+
+            <button class="hesapla-btn" onclick="donustur()">Hesapla</button>
+
+            <div class="sonuc-kutu" id="sonucKutu" style="display:none;">
+                <p class="sonuc-deger" id="sonucDeger"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function donustur() {
+            var deger = parseFloat(document.getElementById('deger').value);
+            var tip = document.getElementById('donusumTipi').value;
+
+            if (isNaN(deger)) { alert('Lütfen geçerli bir sayı girin.'); return; }
+
+            var sonuc;
+            switch (tip) {
+                case 'c_f':  sonuc = deger * 9/5 + 32; break;
+                case 'f_c':  sonuc = (deger - 32) * 5/9; break;
+                case 'c_k':  sonuc = deger + 273.15; break;
+                case 'k_c':  sonuc = deger - 273.15; break;
+                case 'm_km': sonuc = deger / 1000; break;
+                case 'km_m': sonuc = deger * 1000; break;
+                case 'm_mil': sonuc = deger / 1609.344; break;
+                case 'mil_m': sonuc = deger * 1609.344; break;
+                case 'kg_g': sonuc = deger * 1000; break;
+                case 'g_kg': sonuc = deger / 1000; break;
+            }
+
+            var formatli = sonuc % 1 === 0
+                ? sonuc.toLocaleString('tr-TR')
+                : parseFloat(sonuc.toFixed(4)).toLocaleString('tr-TR');
+
+            document.getElementById('sonucDeger').textContent = 'Sonuç: ' + formatli;
+            document.getElementById('sonucKutu').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

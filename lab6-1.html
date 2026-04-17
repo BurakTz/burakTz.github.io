@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6-1: Öğrenci Not Hesaplama - Burak Tuzcu</title>
+    <link rel="stylesheet" href="styles/lab6.css">
+</head>
+<body>
+
+    <div class="back-bar">
+        <a href="about.html" class="back-link">&#8592; Geri Dön</a>
+        <span>Lab 6-1: Öğrenci Not Hesaplama</span>
+    </div>
+
+    <div class="lab-wrapper">
+        <div class="lab-card">
+            <h1>Öğrenci Not Hesaplama</h1>
+
+            <div class="form-group">
+                <label for="adSoyad">Ad Soyad</label>
+                <input type="text" id="adSoyad" placeholder="Adınızı ve soyadınızı girin">
+            </div>
+            <div class="form-group">
+                <label for="vize">Vize Notu</label>
+                <input type="text" id="vize" placeholder="0 - 100">
+            </div>
+            <div class="form-group">
+                <label for="final">Final Notu</label>
+                <input type="text" id="final" placeholder="0 - 100">
+            </div>
+
+            <button class="hesapla-btn" onclick="hesapla()">Hesapla</button>
+
+            <div class="sonuc-kutu" id="sonucKutu" style="display:none;">
+                <p class="sonuc-isim" id="sonucIsim"></p>
+                <p id="sonucOrtalama"></p>
+                <p id="sonucHarf"></p>
+                <p id="sonucDurum"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function hesapla() {
+            var ad = document.getElementById('adSoyad').value.trim();
+            var vize = parseFloat(document.getElementById('vize').value);
+            var final = parseFloat(document.getElementById('final').value);
+
+            if (!ad) { alert('Lütfen Ad Soyad giriniz.'); return; }
+            if (isNaN(vize) || vize < 0 || vize > 100) { alert('Geçerli bir vize notu girin (0-100).'); return; }
+            if (isNaN(final) || final < 0 || final > 100) { alert('Geçerli bir final notu girin (0-100).'); return; }
+
+            var ort = vize * 0.4 + final * 0.6;
+
+            var harf;
+            if (ort >= 90)      harf = 'AA';
+            else if (ort >= 85) harf = 'BA';
+            else if (ort >= 80) harf = 'BB';
+            else if (ort >= 75) harf = 'CB';
+            else if (ort >= 70) harf = 'CC';
+            else if (ort >= 65) harf = 'DC';
+            else if (ort >= 60) harf = 'DD';
+            else if (ort >= 50) harf = 'FD';
+            else                harf = 'FF';
+
+            var durum = ort >= 50 ? 'Geçti' : 'Kaldı';
+
+            document.getElementById('sonucIsim').textContent = ad;
+            document.getElementById('sonucOrtalama').textContent = 'Ortalama: ' + ort.toFixed(2);
+            document.getElementById('sonucHarf').textContent = 'Harf Notu: ' + harf;
+            document.getElementById('sonucDurum').textContent = 'Durum: ' + durum;
+
+            var kutu = document.getElementById('sonucKutu');
+            kutu.style.display = 'block';
+            kutu.className = 'sonuc-kutu ' + (ort >= 50 ? 'gecti' : 'kaldi');
+        }
+    </script>
+
+</body>
+</html>

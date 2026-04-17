@@ -1,0 +1,183 @@
+/* =============================================
+   LAB 6 — GENEL STİL
+   ============================================= */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d0d12;
+    color: #e2e8f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* =============================================
+   GERİ DÖNÜŞ BARI
+   ============================================= */
+.back-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0a0a10;
+    border-bottom: 2px solid #6d28d9;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 24px;
+    height: 48px;
+    z-index: 100;
+    font-size: 14px;
+    color: #a0aec0;
+}
+
+.back-link {
+    color: #a855f7;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.back-link:hover {
+    color: #d8b4fe;
+}
+
+/* =============================================
+   WRAPPER + KART
+   ============================================= */
+.lab-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 20px 40px;
+}
+
+.lab-card {
+    background-color: #16161f;
+    border: 1px solid #2d2d3a;
+    border-radius: 6px;
+    padding: 36px 32px;
+    width: 100%;
+    max-width: 520px;
+}
+
+.lab-card h1 {
+    font-size: 22px;
+    color: #f0e6ff;
+    margin: 0 0 28px 0;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #6d28d9;
+}
+
+/* =============================================
+   FORM ELEMANLARı
+   ============================================= */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    color: #a0aec0;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.form-group input[type="text"],
+.form-group select {
+    width: 100%;
+    padding: 10px 14px;
+    background-color: #1e1e2a;
+    border: 1px solid #2d2d3a;
+    border-radius: 4px;
+    color: #e2e8f0;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23a0aec0' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+    border-color: #7c3aed;
+}
+
+/* =============================================
+   HESAPLA BUTONU
+   ============================================= */
+.hesapla-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #7c3aed;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: background-color 0.2s;
+}
+
+.hesapla-btn:hover {
+    background-color: #6d28d9;
+}
+
+/* =============================================
+   SONUÇ KUTUSU
+   ============================================= */
+.sonuc-kutu {
+    margin-top: 22px;
+    background-color: #1a1a26;
+    border: 1px solid #2d2d3a;
+    border-radius: 4px;
+    padding: 18px 20px;
+}
+
+.sonuc-kutu p {
+    margin: 0 0 6px 0;
+    font-size: 15px;
+    color: #c8d0dc;
+    line-height: 1.7;
+}
+
+.sonuc-kutu p:last-child {
+    margin-bottom: 0;
+}
+
+.sonuc-isim {
+    font-weight: bold;
+    font-size: 16px !important;
+    color: #f0e6ff !important;
+    margin-bottom: 10px !important;
+}
+
+.sonuc-deger {
+    font-weight: bold;
+    font-size: 18px !important;
+    color: #a855f7 !important;
+    text-align: center;
+}
+
+.sonuc-kutu.gecti {
+    border-color: #166534;
+    background-color: #14231a;
+}
+
+.sonuc-kutu.kaldi {
+    border-color: #7f1d1d;
+    background-color: #231414;
+}
