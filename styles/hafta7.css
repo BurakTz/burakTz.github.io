@@ -1,0 +1,48 @@
+.hero-section {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Koyu tema overrides */
+body.dark-theme {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+body.dark-theme .bg-light {
+    background-color: #16213e !important;
+}
+
+body.dark-theme .card {
+    background-color: #0f3460;
+    color: #e0e0e0;
+    border-color: #1a4a8a;
+}
+
+body.dark-theme .list-group-item {
+    background-color: #0f3460;
+    color: #e0e0e0;
+    border-color: #1a4a8a;
+}
+
+body.dark-theme .text-secondary {
+    color: #a0aec0 !important;
+}
+
+body.dark-theme .form-control,
+body.dark-theme .form-select {
+    background-color: #16213e;
+    color: #e0e0e0;
+    border-color: #1a4a8a;
+}
+
+body.dark-theme .form-control::placeholder {
+    color: #718096;
+}
+
+body.dark-theme .alert-info {
+    background-color: #0f3460;
+    color: #90cdf4;
+    border-color: #1a4a8a;
+}
